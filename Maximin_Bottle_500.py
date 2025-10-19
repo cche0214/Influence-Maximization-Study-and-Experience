@@ -685,14 +685,9 @@ def main(graph_path, attribute_name, theta, k, verbose=1, epsilon_theta=0.1, ell
         "greedy": greedy_result,
         "theta": theta_used
     }
-# ...existing code...
-
-import contextlib
-from Maximin_Bottle_500 import main
 
 if __name__ == "__main__":
-    with open("output.txt", "w", encoding="utf-8") as f, contextlib.redirect_stdout(f):
-        file_path = "C:\\Users\\31062\\Desktop\\科研积累\\code\\graph_spa_500_0.gml"
-        for k in [10, 20, 30, 40, 50]:
-            print(f"\n=== 运行 k={k} ===")
-            main(file_path, attribute_name="gender", theta=None, k=k, verbose=1)
+    file_path = "C:\\Users\\31062\\Desktop\\Influence-Maximization-Study-and-Experience\\datasets\\graph_spa_500_0.gml"
+    for k in [10, 20, 30, 40, 50]:
+        print(f"\n=== 运行 k={k} ===")
+        main(file_path, attribute_name="gender", theta=None, k=k, verbose=1)
